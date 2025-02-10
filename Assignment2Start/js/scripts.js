@@ -1,34 +1,54 @@
 // constants for query selector
-const randomColor = document.getElementById("randColor"); 
+const custColorButton = document.querySelector('.custColor');
+const randomColorButton = document.querySelector('.randColor');
 
 // function to change bg color from user input and add student id
 function changeCustomColor() {
+    const customNumberInput = document.getElementById('customNumber').value;
+    const number = Number(customNumberInput);
+
+    if (number < 0 || number > 100) {
+        document.body.style.backgroundColor = 'red';
+
+    } else if (number >= 0 && number <= 20) {
+        document.body.style.backgroundColor = "green";
+
+    } else if (number > 20 && number <= 40) {
+        document.body.style.backgroundColor = "blue";
+
+    } else if (number > 40 && number <= 60) {    
+        document.body.style.backgroundColor = "orange";
+
+    } else if (number > 60 && number <= 80) {    
+        document.body.style.backgroundColor = "purple";
+
+    } else if (number > 80 && number <= 100) {        
+        document.body.style.backgroundColor = "yellow";
+    }
 
 }
 
 // function to change bg color from random no.
 function changeRandomColor() {
-    // Generate a random number between 1 and 100
-    const randomNum = Math.floor(Math.random() * 100) + 1;
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
 
-    if (randomNum < 0 || randomNum > 100) {
-        // If input is less than 0 or more than 100, set background to red
-        document.body.style.background = "red";
-    } else if (randomNum >= 0 && randomNum <= 20) {
-        // If input is between 0 and 20, set background to green
-        document.body.style.background = "green";
-    } else if (randomNum > 20 && randomNum <= 40) {
-        // If input is between 20 and 40, set background to blue
-        document.body.style.background = "blue";
-    } else if (randomNum > 40 && randomNum <= 60) {
-        // If input is between 40 and 60, set background to orange
-        document.body.style.background = "orange";
-    } else if (randomNum > 60 && randomNum <= 80) {
-        // If input is between 60 and 80, set background to purple
-        document.body.style.background = "purple";
-    } else if (randomNum > 80 && randomNum <= 100) {
-        // If input is between 80 and 100, set background to yellow
-        document.body.style.background = "yellow";
+    if (randomNumber < 0 || randomNumber > 100) {
+        document.body.style.backgroundColor = 'red';
+
+    } else if (randomNumber >= 0 && randomNumber <= 20) {
+        document.body.style.backgroundColor = "green";
+
+    } else if (randomNumber > 20 && randomNumber <= 40) {
+        document.body.style.backgroundColor = "blue";
+
+    } else if (randomNumber > 40 && randomNumber <= 60) {    
+        document.body.style.backgroundColor = "orange";
+
+    } else if (randomNumber > 60 && randomNumber <= 80) {    
+        document.body.style.backgroundColor = "purple";
+
+    } else if (randomNumber > 80 && randomNumber <= 100) {        
+        document.body.style.backgroundColor = "yellow";
     }
 }
 // function to generate options for select list
@@ -41,8 +61,9 @@ function addList() {
 function changeImage() {
 
 }
-
 // event listeners for on click event of buttons and select
-randomColor.addEventListener("click", changeRandomColor);
+
+custColorButton.addEventListener('click', changeCustomColor);
+randomColorButton.addEventListener('click', changeRandomColor);
 
 // event listeners for on change event of select
