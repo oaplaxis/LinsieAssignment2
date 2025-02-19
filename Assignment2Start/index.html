@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/scripts.js" defer></script>
     <title>Linsie's Assignment 2 | COMP1073 Client-Side JavaScript</title>
@@ -11,7 +14,7 @@
 
 <body>
     <div>
-        <p id="200495638"></p>
+        <p id="studentIdDisplay"></p>
     </div>
     <div>
         <label for="customNumber">Enter number from 1 to 100:</label>
@@ -21,30 +24,14 @@
         <button class="custColor">Change custom color</button>
         <button class="randColor">Change random color</button>
     </div>
-    <div>
-        <label for="imageSelect">Select A Goku</label>
+    <div class="imageselector">
+        <label for="imageSelect">Select A Goku: </label>
         <select id="imageSelect">
-            <option value="">Base Goku</option>
-            <option value="">Super Saiyan Goku</option>
-            <option value="">Super Saiyan 2 Goku</option>
-            <option value="">Super Saiyan 3 Goku</option>
-            <option value="">Super Saiyan 4 Goku</option>
-            <option value="">Super Saiyan God Goku</option>
-            <option value="">Super Saiyan Blue Goku</option>
-            <option value="">Ultra Instinct -Sign- Goku</option>
-            <option value="">Mastered Ultra Instinct Goku</option>
+            <option value=""> --Choose a form-- </option>
         </select>
     </div>
-    <div>
-        <!-- <img id="basegoku" src="./img/base.png" alt="base goku"></img>
-        <img id="ssgoku" src="./img/ss1.png" alt="super saiyan goku"></img>
-        <img id="ss2goku" src="./img/ss2.png" alt="super saiyan 2 goku"></img>
-        <img id="ss3goku" src="./img/ss3.png" alt="super saiyan 3 goku"></img>
-        <img id="ss4goku" src="./img/ss4.png" alt="super saiyan 4 goku"></img>
-        <img id="ssggoku" src="./img/ssg.png" alt="super saiyan god goku"></img>
-        <img id="ssbgoku" src="./img/ssb.png" alt="super saiyan blue goku"></img>
-        <img id="uisigngoku" src="./img/uisign.png" alt="ultra instinct sign goku"></img>
-        <img id="muigoku" src="./img/mui.png" alt="mastered ultra instinct goku"></img> -->
+    <div class="gokupics">
+        <img id="gokuImage" src="about:blank" alt=""></img>
     </div>
 </body>
 
